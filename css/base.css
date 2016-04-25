@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700,900);
+* {
+	-webkit-appearance: none;
+	-webkit-text-size-adjust: 100%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	-webkit-user-select: none;
+	user-select: none;
+}
+body {
+	background-color: #F2EFE4;
+	margin: 20px auto;
+	padding: 20px;
+	text-align: center;
+	max-width: 1860px;
+}
+strong {
+	font-weight: 700;
+}
+header {
+	margin: 80px 0;
+	color: #524C48;
+}
+header h1 {
+	text-transform: uppercase;
+	font-size: 48px;
+	font-weight: 900;
+	line-height: 100%;
+}
+header p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 150%;
+}
+header #cta {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 20px;
+	color: inherit;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	border: 1px solid rgba(0,0,0,0.2);
+	font-weight: 900;
+}
+.container {
+	display: inline-block;
+	width: 310px;
+	height: 310px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 50px 10px;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	border-color: #F2EFE4;
+	background-color: #FFF;
+	vertical-align: top;
+	-webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+	perspective: 500px;
+}
+.container h2 {
+	font-weight: 400;
+	font-size: 16px;
+	color: #A6A098;
+	margin: 0;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.container p {
+	margin: 0;
+	margin-top: 50px;
+	color: #A6A098;
+	font-size: 14px;
+}
+.error {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	position: absolute;
+}

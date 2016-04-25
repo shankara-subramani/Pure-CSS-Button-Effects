@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>CSS Button Effects</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/button.css" />
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+<header>
+  <h3>Pure CSS Button Effects</h3>
+</header>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container" style="margin-top: 10px;">
+        <div class="row">
+            <!-- type 1 -->
+            <div class="twelve columns centered">
+                <a class="btn type1">Glow</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre class="language-markup"><code>.btn {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.btn:active {
+  -webkit-box-shadow: 0 0 50px rgba(255,255,255,0.8);
+  box-shadow: 0 0 50px rgba(255,255,255,0.8);
+}</code></pre>
+            </div>
+        </div>
+        <!-- type 2 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type2">Flash</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn:active {
+  -webkit-animation: flash linear 0.1s;
+  animation: flash linear 0.1s;
+}
+@-webkit-keyframes flash {
+  0%   {opacity:0;}
+  50%  {opacity:0.5;}
+  75%  {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes flash {
+  0%   {opacity:0;}
+  50%  {opacity:0.5;}
+  75%  {opacity:0;}
+  100% {opacity:1;}
+}</code></pre>
+            </div>
+        </div>
+        <!-- type 3 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type3">Spinner</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn:hover {
+  -webkit-transform: rotateX(10deg);
+  transform: rotateX(10deg);
+}
+.btn:active {
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+.btn {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}</code></pre>
+            </div>
+        </div>
+        <!-- type 4 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type4">Shake</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn:active {
+  -webkit-animation: shake linear 0.1s;
+  animation: shake linear 0.1s;
+  -webkit-transform-origin: 50% 80%;
+  transform-origin: 50% 80%;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes shake {
+  0%    {transform: rotateZ(-5deg) translateX(-2px);}
+  50%   {transform: rotateZ(5deg) translateX(2px);}
+  100% {transform: rotateZ(0deg) translateX(0px);}
+}
+@keyframes shake {
+  0%    {transform: rotateZ(-5deg) translateX(-2px);}
+  50%   {transform: rotateZ(5deg) translateX(2px);}
+  100% {transform: rotateZ(0deg) translateX(0px);}
+}
+
+</code></pre>
+            </div>
+        </div>
+        <!-- type 5 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type5">Squeeze</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn:hover {
+  -webkit-transform: scale(0.98,0.98);
+  transform: scale(0.98,0.98);
+}
+.btn:active {
+  -webkit-transform: scale(0.60,0.75);
+  transform: scale(0.60,0.75);
+  letter-spacing: -1px;
+}
+.btn {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+</code></pre>
+            </div>
+        </div>
+        <!-- type 6 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type6">Bounce</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn:active {
+  -webkit-animation: bounce linear 0.2s;
+  animation: bounce linear 0.2s;
+}
+@keyframes bounce{
+  0%   {transform: translate(0px,0px);}
+  15%  {transform: translate(0px,-25px);}
+  30%  {transform: translate(0px,0px);}
+  45%  {transform: translate(0px,-15px);}
+  60%  {transform: translate(0px,0px);}
+  75%  {transform: translate(0px,-5px);}
+  100% {transform: translate(0px,0px);}
+}
+@-webkit-keyframes bounce {
+  0%   {transform: translate(0px,0px);}
+  15%  {transform: translate(0px,-25px);}
+  30%  {transform: translate(0px,0px);}
+  45%  {transform: translate(0px,-15px);}
+  60%  {transform: translate(0px,0px);}
+  75%  {transform: translate(0px,-5px);}
+  100% {transform: translate(0px,0px);}
+}
+</code></pre>
+            </div>
+        </div>
+        <!-- type 7 -->
+        <div class="row">
+            <div class="twelve columns centered">
+                <a class="btn type7">Light press</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns noMarginTop">
+                <pre><code>.btn {
+  border-bottom: 3px solid #181F24;
+  -webkit-box-shadow: 0 3px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 2px rgba(0,0,0,0.15);
+}
+.btn:hover {
+  border-bottom: 3px solid #2D3A42;
+}
+.btn:active {
+  margin-top: 1px;
+  border-bottom: 2px solid #646E78;
+  -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 1px rgba(0,0,0,0.15);
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
